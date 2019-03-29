@@ -1,0 +1,15 @@
+<!-- ERISSON BEZERRA NUNES -- 402876 -->
+
+<div class= container >
+  <div class="alert alert-{{alerta}}" role="alert" [hidden] = "true" >
+    <strong>alert</strong>
+  </div>
+
+  <input type="number" placeholder="dia" class="form-control" #diaInput>
+  <input type="number" placeholder="mês" class="form-control" #mesInput>
+  <input type="number" placeholder="ano" class="form-control" #anoinput>
+  <input type="number" placeholder="investimento" class="form-control" max="2000" #investInput >
+
+  <button type="button" class="btn btn-primary" (click)="iBettMyMoney(diaInput,mesInput,anoinput,investInput)" > button </button>
+
+</div>
