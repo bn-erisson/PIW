@@ -10,8 +10,10 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { from } from 'rxjs';
 import { InvertidorComponent } from './invertidor/invertidor.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DatepickerPopupComponent } from './datepicker-popup/datepicker-popup.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PessoaCardComponent } from './pessoa-card/pessoa-card.component';
+import { PessoaFormComponent } from './pessoa-form/pessoa-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DatepickerPopupComponent } from './datepicker-popup/datepicker-popup.co
     ContentComponent,
     FooterComponent,
     InvertidorComponent,
-    DatepickerPopupComponent
+    DatepickerPopupComponent,
+    PessoaCardComponent,
+    PessoaFormComponent,
   ],
   imports: [
     BrowserModule,

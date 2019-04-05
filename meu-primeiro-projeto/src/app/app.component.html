@@ -1,4 +1,17 @@
-<app-datepicker-popup></app-datepicker-popup>
+
+<div class="container">
+
+    <app-pessoa-form (pessoaSalva)="salvarPessoa($event)" ></app-pessoa-form>
+     
+    <div class="row">
+        <div class="col-2" *ngFor="let p of pessoas">
+            
+            <app-pessoa-card [objPessoa]="p"></app-pessoa-card>
+
+        </div>
+    </div>
+
+</div>
 
 
 
@@ -7,13 +20,7 @@
 
 
 
-
-
-
-
-
-
-
+<!-- <app-datepicker-popup (minhaData)="mostrarData($event)"></app-datepicker-popup> -->
 
 
 

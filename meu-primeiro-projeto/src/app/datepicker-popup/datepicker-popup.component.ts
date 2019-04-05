@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-datepicker-popup',
   templateUrl: './datepicker-popup.component.html',
@@ -8,5 +7,11 @@ import { Component } from '@angular/core';
 export class DatepickerPopupComponent {
 
   model;
+  @Output() minhaData = new EventEmitter<Object>();
+
+  selecionouData() {
+    // console.log(this.model);
+    this.minhaData.emit(this.model)
+  }
 
 }
