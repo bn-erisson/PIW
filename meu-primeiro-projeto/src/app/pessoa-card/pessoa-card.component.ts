@@ -9,4 +9,11 @@ export class PessoaCardComponent{
 
   @Input('objPessoa') pessoa: any;
 
+  getEstilocard() {
+  return{
+    'border-width.px': this.pessoa.id,
+    'backgroundColor': this.pessoa.id%2==0?'lightblue':'lightgreen'
+  };
+  }
+
 }

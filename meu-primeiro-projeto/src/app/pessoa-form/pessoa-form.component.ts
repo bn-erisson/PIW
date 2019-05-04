@@ -8,18 +8,18 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class PessoaFormComponent{
 
-  nome = "Jefferson de Carvalho";
+  nome = 'Jefferson de Carvalho';
   clicou = false;
   contador = 0;
 
-  @Output() pessoaSalva = new EventEmitter
+  @Output() pessoaSalva = new EventEmitter;
 
   salvar(nomeInput: string){
     this.nome = nomeInput;
     this.contador++;
     this.clicou = true;
     let pTemp = {nome:this.nome,id:this.contador};
-    this.pessoaSalva.emit(pTemp)
+    this.pessoaSalva.emit(pTemp);
     /*this.pessoas.push({nome:this.nome,
                        id:this.contador});*/
   }

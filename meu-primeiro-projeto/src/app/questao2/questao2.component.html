@@ -1,0 +1,3 @@
+<span [style.color]="(ehFibonacci(inputnumero))?'green':'red'"> <h1 *ngIf="clicou"> O numero {{frase}} </h1> </span>
+<input type="number" #inputnumero >
+<button (click)='mostrarFrase(inputnumero)' #botao> Testar </button>

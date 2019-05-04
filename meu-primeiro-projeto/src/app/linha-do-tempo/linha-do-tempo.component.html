@@ -1,0 +1,22 @@
+<div class="form-group">
+
+  <div class="row" style="margin: 50px">
+    <div class="col-1">Nome</div>
+    <div class="col-11">
+        <input type="text" class="form-control" #nomeInput >
+    </div>
+  </div>
+    <div class="row" style="margin: 50px">
+      <textarea class="form-control" #textoInput></textarea>
+    </div>
+
+  <button type="button" class="btn btn-primary"  style="margin-left: 50px" (click)="adicionarpost(nomeInput.value, textoInput.value)" >Enviar</button>
+  
+
+</div>
+
+<div class="row" *ngFor="let p of posts" >
+  <div class="col-12">
+  <app-post-da-linha [post]="p" (idpost)="findPost($event)" ></app-post-da-linha>
+  </div>
+</div>
