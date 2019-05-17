@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "login": "0402876",
+      "firstName": "Erisson",
+      "lastName": "Nunes",
+      "email": "erissonnunes@hotmail.com",
+      "zipcode": "00000-000",
+      "password": "12345678",
+      "id": 1
+    }
+  ]
+}
