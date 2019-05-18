@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ListUserComponent implements OnInit {
 
-  users: User[];
+  users:User[];
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService:UserService,
+              private router:Router) { 
     this.users = [];
   }
 
@@ -20,28 +21,26 @@ export class ListUserComponent implements OnInit {
     this.list();
   }
 
-  list() {
+  list(){
     this.userService.list().subscribe(
-      (res: User[]) => {
+      (res:User[])=>{
         this.users = res;
-        //O que isso ta fazendo?
       }
     );
   }
 
-  // delete(id: number){
-  //   this.userService.delete(id).subscribe(
-  //     (res:any)=>{
-  //       console.log(`User id ${id}`); 
-  //     }
-  //   ){
+  delete(id:number){
+    this.userService.delete(id).subscribe(
+      (res:any)=>{
+        console.log(`User id ${id} deleted!`);
+        this.list();
+      }
+    );
+  }
 
-  //   }
-  // }
-
-  edit(id: number) {
-    this.router.navigate(['edit/user', id]);
-    // que rota é essa?
+  edit(id:number){
+    //nevegação imperativa
+    this.router.navigate(['edit/user',id]);
   }
 
 }

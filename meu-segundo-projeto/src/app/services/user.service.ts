@@ -7,24 +7,32 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  constructor( private httpClient: HttpClient) { }
+  url:string = "http://localhost:3000/users";
 
-  url: string = 'http://localhost:3000/users';
+  constructor(private httpClient:HttpClient) { }
 
-  register(user: User){
-    return this.httpClient.post(this.url, user); //Observable
+  register(user:User){
+    return this.httpClient.post(this.url,user); //Observable
   }
 
   list(){
     return this.httpClient.get(this.url); //Observable
   }
 
-  delete(id: number) {
-    this.httpClient.delete(`${this.url} / ${id}`);
+  delete(id:number){
+    return this.httpClient.delete(`${this.url}/${id}`);
   }
 
-  retrieveById(id: number) {
+  retrieveById(id:number){
     return this.httpClient.get(`${this.url}/${id}`);
-
   }
+
+  update(user:User){
+    return this.httpClient.put(`${this.url}/${user.id}`,user);
+  }
+
+  retrieveByLogin(login:string){
+    return this.httpClient.get(`${this.url}/?login=${login}`);
+  }
+
 }

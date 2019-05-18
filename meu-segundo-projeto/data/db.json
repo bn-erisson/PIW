@@ -1,13 +1,22 @@
 {
   "users": [
     {
-      "login": "0402876",
+      "login": "erissonnunes@hotmail.com",
       "firstName": "Erisson",
       "lastName": "Nunes",
       "email": "erissonnunes@hotmail.com",
-      "zipcode": "00000-000",
+      "zipcode": "62980-000",
       "password": "12345678",
       "id": 1
+    },
+    {
+      "login": "nat@hotmail.com",
+      "firstName": "Nat",
+      "lastName": "reb",
+      "email": "nat@hotmail.com",
+      "zipcode": "62980-123",
+      "password": "12345678",
+      "id": 2
     }
   ]
 }

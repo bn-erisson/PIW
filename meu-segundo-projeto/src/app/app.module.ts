@@ -1,3 +1,4 @@
+import { LoginUserComponent } from './core/login-user/login-user.component';
 import { ListUserComponent } from './core/list-user/list-user.component';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,10 +11,10 @@ import { RegisterUserComponentComponent } from './core/register-user-component/r
 import { EditUserComponent } from './core/edit-user/edit-user.component';
 
 const routes: Routes = [
-  {path: '', component: RegisterUserComponentComponent},
+  {path: '', component: LoginUserComponent},
   {path: 'list/user', component: ListUserComponent},
   {path: 'register/user', component: RegisterUserComponentComponent},
-  {path: 'edit/user/:id', component: EditUserComponent},
+  {path: 'edit/user/:id', component: EditUserComponent}
 ];
 
 @NgModule({
