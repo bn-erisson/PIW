@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 })
 export class ListUserComponent implements OnInit {
 
-  users:User[];
+  users: User [] = [];
 
-  constructor(private userService:UserService,
-              private router:Router) { 
-    this.users = [];
+  constructor(private userService: UserService,
+              private router: Router) {
+    // this.users = [];
   }
 
   ngOnInit() {
@@ -23,22 +23,22 @@ export class ListUserComponent implements OnInit {
 
   list(){
     this.userService.list().subscribe(
-      (res:User[])=>{
+      (res: User[]) => {
         this.users = res;
       }
     );
   }
 
-  delete(id:number){
+  delete(id: number) {
     this.userService.delete(id).subscribe(
-      (res:any)=>{
+      (res: any)=>{
         console.log(`User id ${id} deleted!`);
         this.list();
       }
     );
   }
 
-  edit(id:number){
+  edit(id: number) {
     //nevegação imperativa
     this.router.navigate(['edit/user',id]);
   }

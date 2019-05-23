@@ -8,9 +8,11 @@ import { LoginUserComponent } from './login-user/login-user.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ListarProdutoComponent } from './listar-produto/listar-produto.component';
+import { RegistrarProdutoComponent } from './registrar-produto/registrar-produto.component';
 
 @NgModule({
-  declarations: [RegisterUserComponentComponent, ListUserComponent, EditUserComponent, LoginUserComponent],
+  declarations: [RegisterUserComponentComponent, ListUserComponent, EditUserComponent, LoginUserComponent, ListarProdutoComponent, RegistrarProdutoComponent],
   exports: [RegisterUserComponentComponent, ListUserComponent,LoginUserComponent],
   imports: [
     CommonModule,

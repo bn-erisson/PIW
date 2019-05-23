@@ -2,8 +2,8 @@
   "users": [
     {
       "login": "erissonnunes@hotmail.com",
-      "firstName": "Erisson",
-      "lastName": "Nunes",
+      "firstName": "Eriss",
+      "lastName": "Nun",
       "email": "erissonnunes@hotmail.com",
       "zipcode": "62980-000",
       "password": "12345678",
@@ -17,6 +17,32 @@
       "zipcode": "62980-123",
       "password": "12345678",
       "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "teacup",
+      "price": 6,
+      "qtd": 22
+    },
+    {
+      "id": 3,
+      "name": "worldcup",
+      "price": 6e+28,
+      "qtd": 10
+    },
+    {
+      "name": "CoffeCup",
+      "price": "20",
+      "q": "100",
+      "id": 4
+    },
+    {
+      "name": "JuiceCup",
+      "price": "50",
+      "qtd": "10",
+      "id": 5
     }
   ]
 }

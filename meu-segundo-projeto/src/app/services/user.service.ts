@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  url:string = "http://localhost:3000/users";
+  url: string = "http://localhost:3000/users";
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  register(user:User){
+  register(user: User){
     return this.httpClient.post(this.url,user); //Observable
   }
 
@@ -19,19 +19,23 @@ export class UserService {
     return this.httpClient.get(this.url); //Observable
   }
 
-  delete(id:number){
-    return this.httpClient.delete(`${this.url}/${id}`);
-  }
+  // delete(id: number){
+  //   return this.httpClient.delete(`${this.url}/${id}`);
+  // }
 
-  retrieveById(id:number){
+  delete(id: number){
+      return this.httpClient.delete(this.url + '/' + id);
+    }
+
+  retrieveById(id: number){
     return this.httpClient.get(`${this.url}/${id}`);
   }
 
-  update(user:User){
+  update(user: User){
     return this.httpClient.put(`${this.url}/${user.id}`,user);
   }
 
-  retrieveByLogin(login:string){
+  retrieveByLogin(login: string){
     return this.httpClient.get(`${this.url}/?login=${login}`);
   }
 

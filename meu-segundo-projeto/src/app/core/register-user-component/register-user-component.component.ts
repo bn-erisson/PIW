@@ -11,7 +11,7 @@ export class RegisterUserComponentComponent implements OnInit {
 
   user: User;
 
-  constructor( private UserService: UserService) {
+  constructor( private userService: UserService) {
     this.user = new User();
    }
 
@@ -19,7 +19,7 @@ export class RegisterUserComponentComponent implements OnInit {
   }
 
   onSubmit() {
-    this.UserService.register(this.user).subscribe(
+    this.userService.register(this.user).subscribe(
       (res: User) => {
         console.log(`User id ${res.id} added!`);
       }

@@ -18,11 +18,9 @@ export class EditUserComponent implements OnInit {
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.params["id"];
-    //console.log("ID "+id);
 
     this.userService.retrieveById(id).subscribe(
-      (res:User)=>{
-        //console.log(res);
+      (res: User)=>{
         this.user = res;
       }
     );
@@ -38,3 +36,4 @@ export class EditUserComponent implements OnInit {
   }
 
 }
+
