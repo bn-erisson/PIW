@@ -1,7 +1,6 @@
 import { ProductsService } from './../../services/products.service';
-import { Products } from './../../models/Products';
+import { Products } from '../../models/Products';
 import { Router } from '@angular/router';
-import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -37,6 +36,6 @@ export class ListarProdutoComponent implements OnInit {
   }
 
   editar(id: number) {
-    this.router.navigate(['edit/user', id]);
+    this.router.navigate(['editar/produto', id]);
   }
 }

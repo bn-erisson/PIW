@@ -17,7 +17,8 @@ export class EditUserComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.params["id"];
+    // o que inicia isso? como ele pega o id, de onde ele pega?
+    let id = this.activatedRoute.snapshot.params['id'];
 
     this.userService.retrieveById(id).subscribe(
       (res: User)=>{

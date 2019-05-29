@@ -12,16 +12,12 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   register(user: User){
-    return this.httpClient.post(this.url,user); //Observable
+    return this.httpClient.post(this.url, user); //Observable
   }
 
   list(){
-    return this.httpClient.get(this.url); //Observable
+    return this.httpClient.get(`${this.url}/list`);
   }
-
-  // delete(id: number){
-  //   return this.httpClient.delete(`${this.url}/${id}`);
-  // }
 
   delete(id: number){
       return this.httpClient.delete(this.url + '/' + id);
